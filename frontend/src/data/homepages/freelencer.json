@@ -6,12 +6,12 @@
             "section": "hero-section",
             "headings": [
                 {
-                    "content": "Hi, I’m <span>Ganbayar Tsogbadrakh</span><br><span class='span'> Software Engineer.</span>"
+                    "content": "<span>Ganbayar Tsogbadrakh</span><br><span class='span'> Software Developer.</span>"
                 }
             ],
             "texts": [
                 {
-                    "content": "I'm the Front-End Developer for #Company in Bangladesh, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences."
+                    "content": "I'm a passionate backend developer with a knack for turning ideas into reality through clean and efficient code."
                 }
             ],
             "images": [
@@ -39,10 +39,10 @@
             "title": "About Me",
             "texts": [
                 {
-                    "content": "Hi I am a Front-End developer & I can build your website as you want. I can customize plugin & wordpress theme. And I have two years of experience in figma. Now I am able to design your portfolio."
+                    "content": "Dedicated and seasoned Backend Developer with a robust track record of 6 years in the dynamic realms of banking and retail. My journey in the tech industry has been marked by a passion for crafting innovative and scalable solutions that power the backbone of digital ecosystems.."
                 },
                 {
-                    "content": "I have three years of experience with HTML, CSS, JavaScript. And I can Design Your web application."
+                    "content": "Throughout my career, I have honed my skills in backend development, specializing in frameworks including Spring Boot, and Express, enabling me to architect and implement robust server-side solutions."
                 }
             ]
         },
@@ -59,7 +59,7 @@
                             "id": 1,
                             "images": [
                                 {
-                                    "src": "../images/icons/icons-01.png"
+                                    "src": "../images/icons/node.png"
                                 }
                             ]
                         },
