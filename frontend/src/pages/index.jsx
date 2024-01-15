@@ -3,70 +3,90 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { normalizedData } from "@utils";
 import Layout from "@layout";
-import HeroArea from "@containers/hero/layout-10";
-import AboutArea from "@containers/about/layout-03";
-import SkillArea from "@containers/skill/layout-02";
-import ServicesArea from "@containers/service/layout-05";
-import PortfolioArea from "@containers/portfolio/layout-05";
-import BlogArea from "@containers/blog/layout-03";
-import ContactArea from "@containers/contact/layout-03";
+import Header from "@layout/header/layout-01";
+import Footer from "@layout/footer/layout-01";
+import HeroArea from "@containers/hero/layout-01";
+import ServicesArea from "@containers/service/layout-01";
+import PortfolioArea from "@containers/portfolio/layout-01";
+import ResumeArea from "@containers/resume/layout-01";
+import TestimonialArea from "@containers/testimonial/layout-01";
+import ClientArea from "@containers/client/layout-01";
+import PricingArea from "@containers/pricing/layout-01";
+import BlogArea from "@containers/blog/layout-01";
+import ContactArea from "@containers/contact/layout-01";
+import EducationArea from "@containers/education/layout-01";
+import SkillArea from "@containers/skill/layout-01";
+import ExperienceArea from "@containers/experience/layout-01";
+import InterviewArea from "@containers/interview/layout-01";
 
-const IndexFreelencerPage = ({ data }) => {
+const IndexPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
+
     return (
-        <Layout pageTitle="Ganbayar Tsogbadrakh" className="white-version">
+        <Layout pageTitle="Home Default">
+            <Header
+                data={{
+                    ...data.header,
+                    ...data.navigation,
+                    socials: data.site.siteMetadata.socials,
+                }}
+            />
             <main className="main-page-wrapper">
-                <div className="rn-slider-area">
-                    <div className="container">
-                        <div className="row row--30 pt--100 pt_sm--50">
-                            <div className="col-lg-6">
-                                <HeroArea data={content["hero-section"]} />
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="sticky-home-wrapper">
-                                    <AboutArea
-                                        data={content["about-section"]}
-                                    />
-                                    <SkillArea
-                                        data={content["skill-section"]}
-                                    />
-                                    <ServicesArea
-                                        data={content["service-section"]}
-                                    />
-                                    <PortfolioArea
-                                        data={content["portfolio-section"]}
-                                    />
-                                    <BlogArea
-                                        data={{
-                                            ...content["blog-section"],
-                                            blogs: data?.allArticle?.nodes,
-                                        }}
-                                    />
-                                    <ContactArea
-                                        data={{
-                                            getform_url:
-                                                data.site.siteMetadata
-                                                    ?.getform_url,
-                                        }}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <HeroArea
+                    data={{
+                        ...content["hero-section"],
+                        socials: data.site.siteMetadata.socials,
+                    }}
+                />
+                <ServicesArea data={content["service-section"]} />
+                <PortfolioArea data={content["portfolio-section"]} />
+                <ResumeArea data={content["resume-section"]}>
+                    <EducationArea data={content["education-section"]} />
+                    <SkillArea data={content["skill-section"]} />
+                    <ExperienceArea data={content["experience-section"]} />
+                    <InterviewArea data={content["interview-section"]} />
+                </ResumeArea>
+                <TestimonialArea data={content["testimonial-section"]} />
+                <ClientArea data={content["client-section"]} />
+                <PricingArea data={content["pricing-section"]} />
+                <BlogArea
+                    data={{
+                        ...content["blog-section"],
+                        blogs: data?.allArticle?.nodes,
+                    }}
+                />
+                <ContactArea
+                    data={{
+                        ...content["contact-section"],
+                        socials: data.site.siteMetadata.socials,
+                        phone: data.site.siteMetadata?.contact?.phone,
+                        email: data.site.siteMetadata?.contact?.email,
+                        getform_url: data.site.siteMetadata?.getform_url,
+                    }}
+                />
             </main>
+            <Footer data={{ ...data.footer }} className="section-separator" />
         </Layout>
     );
 };
 
 export const query = graphql`
-    query FreelencerPageWhiteQuery {
+    query DefaultPageQuery {
         site {
-            siteMetadata {
-                getform_url
+            ...Site
+        }
+        header: general(section: { eq: "header-1" }) {
+            ...Header01
+        }
+        navigation: general(section: { eq: "menu-1" }) {
+            menu {
+                ...Menu01
             }
         }
-        homePage(title: { eq: "freelencer-home" }) {
+        footer: general(section: { eq: "footer-1" }) {
+            ...Footer01
+        }
+        homePage(title: { eq: "default-home" }) {
             content {
                 ...Content01
             }
@@ -79,10 +99,15 @@ export const query = graphql`
     }
 `;
 
-IndexFreelencerPage.propTypes = {
+IndexPage.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
             siteMetadata: PropTypes.shape({
+                socials: PropTypes.arrayOf(PropTypes.shape({})),
+                contact: PropTypes.shape({
+                    phone: PropTypes.string,
+                    email: PropTypes.string,
+                }),
                 getform_url: PropTypes.string,
             }),
         }),
@@ -92,7 +117,10 @@ IndexFreelencerPage.propTypes = {
         allArticle: PropTypes.shape({
             nodes: PropTypes.arrayOf(PropTypes.shape({})),
         }),
+        navigation: PropTypes.shape({}),
+        header: PropTypes.shape({}),
+        footer: PropTypes.shape({}),
     }),
 };
 
-export default IndexFreelencerPage;
+export default IndexPage;

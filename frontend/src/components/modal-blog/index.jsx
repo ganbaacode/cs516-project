@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { X } from "react-feather";
 import Image from "@ui/image";
 import { ImageType } from "@utils/types";
+import Comment from "../comment";
 
 const BlogModal = ({
     show,
@@ -55,6 +56,7 @@ const BlogModal = ({
                     <h2 className="title">{title}</h2>
                     <div dangerouslySetInnerHTML={{ __html: content }} />
                 </div>
+                <Comment slug={slug} id={id} title={title} />
             </Modal.Body>
         </Modal>
     );
