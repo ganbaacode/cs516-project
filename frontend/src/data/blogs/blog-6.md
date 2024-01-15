@@ -1,20 +1,13 @@
 ---
-title: Mobile app landing design & app service
-date: 2021-05-03 11:10:00
-category: Application
+title: Microservices all the time?
+date: 2024-01-14 11:10:00
+category: Blog
 image: {
-	src: "../images/blog/blog-02.jpg"
+	src: "../images/blog/microservices.jpeg"
 }
 ---
 
-Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+Microservices approaches aren't all a bed of roses. Having a mix of languages and frameworks can be hard to support and, without strict discipline, can lead to confusion down the road. Eventual consistency, coordination, discovery, and complex error recovery can make thindifficult in a microservice universe.
 
-#### Nobis eleifend option conguenes.
+Software engineering is always a game tradeoffs. Beacause something in fashion ( like microservices ) doesn't make it usually right for all problems and use cases. What matters is knowing about the different architectural options, understanding their pros and cons, and, importantly, understanding the requirements and needs of your own problem. ( And yes in some case of situations, having monolith is OK.) 
 
-Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed posuere massa nunc quis dui. Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa nisi. Curabitur sit amet suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc imperdiet risus leo, in rutrum erat dignissim id.
-
-Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae nisi tortor. Morbi leo nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit bibendum. Morbi nec efficitur ex.
-
-#### Mauris tempor, orci id pellentesque.
-
-Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla dapibus dignissim. Pellentesque quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem rhoncus dolor, a facilisis neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa tristique. Nullam in aliquam diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed efficitur sollicitudin auctor. Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum et.

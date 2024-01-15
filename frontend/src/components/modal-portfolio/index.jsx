@@ -73,16 +73,6 @@ const PortfolioModal = ({
                                     {text.content}
                                 </p>
                             ))}
-                            <div className="button-group mt--20">
-                                <Button path={path} className="thumbs-icon">
-                                    <span>LIKE THIS</span>
-                                    <ThumbsUp />
-                                </Button>
-                                <Button path={path}>
-                                    <span>VIEW PROJECT</span>
-                                    <ChevronRight />
-                                </Button>
-                            </div>
                         </div>
                     </div>
                 </div>
