@@ -56,7 +56,6 @@ const BlogModal = ({
                     <h2 className="title">{title}</h2>
                     <div dangerouslySetInnerHTML={{ __html: content }} />
                 </div>
-                <Comment slug={slug} id={id} title={title} />
             </Modal.Body>
         </Modal>
     );

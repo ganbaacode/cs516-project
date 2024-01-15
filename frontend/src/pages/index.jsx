@@ -43,9 +43,6 @@ const IndexFreelencerPage = ({ data }) => {
                                             blogs: data?.allArticle?.nodes,
                                         }}
                                     />
-                                    <TestimonialArea
-                                        data={content["testimonial-section"]}
-                                    />
                                     <ContactArea
                                         data={{
                                             getform_url:

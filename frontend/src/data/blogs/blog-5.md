@@ -1,20 +1,14 @@
 ---
-title: The services provide for development
-date: 2021-15-02 11:10:00
-category: development
+title: My thoughts on FAAS
+date: 2024-01-15 15:42:00
+category: blog
 image: {
-	src: "../images/blog/blog-01.jpg"
+	src: "../images/blog/faas.png"
 }
 ---
-
-Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
-
-#### Nobis eleifend option conguenes.
-
-Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed posuere massa nunc quis dui. Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa nisi. Curabitur sit amet suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc imperdiet risus leo, in rutrum erat dignissim id.
-
-Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae nisi tortor. Morbi leo nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit bibendum. Morbi nec efficitur ex.
-
-#### Mauris tempor, orci id pellentesque.
-
-Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla dapibus dignissim. Pellentesque quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem rhoncus dolor, a facilisis neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa tristique. Nullam in aliquam diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed efficitur sollicitudin auctor. Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum et.
+More on FaaS
+AWS's FaaS offering is called AWS Lambda and is one of the first from the major cloud providers. Note that Lambda isn't the only game in town. Microsoft Azure Functions, IBM Cloud Functions, and
+Google Cloud Functions are other Faas services you might want to look at.
+Many developers conflate serverless with FaaS offerings like AWS Lambda, which often leads to confusing arguments around the adoption of containers or serverless when they really mean containers or functions. We like how TJ Hallowaychuk, the creator of the Apex framework, defines what serverless is about. He once tweeted,
+"serverless != functions, Faas == functions, serverless == on-demand scaling and pricing characteristics (not limited to functions)." We couldn't agree more.
+An emerging trend is that of serverless containers; that is, leveraging containers instead of functions to implement the custom logic and using the container as a utility service and incurring costs only when the container runs. Services like AWS Far-gate or Google Cloud Run offer this capability. The difference between the two (functions vs. containers) is just the degree to which developers want to shift the boundaries of shared responsibilities. Containers give you a bit more control over user space libraries and network capabilities. Containers are an evolution of the existing server-based/VM model, offering an easy packaging and deployment model for your application stack. You are still required to define your operating system's requirements, your desired language stack, and dependencies to deploy code, which means you continue to carry some of the infrastructure complexity. For the purpose of this book, we are going to focus on using FaaS for our custom logic, though you can explore the usage of serverless containers for the same as well.

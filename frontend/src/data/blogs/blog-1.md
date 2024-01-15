@@ -1,20 +1,15 @@
 ---
-title: T-shirt design is the part of design
-date: 2021-05-02 11:10:00
-category: canada
+title: DevOps vs NoOps ?
+date: 2024-01-16 12:17:00
+category: blog
 image: {
-	src: "../images/blog/blog-big-01.jpg"
+	src: "../images/blog/noops.png"
 }
 ---
 
-Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+Early on, around the time of the first conference on serverless technologies and architectures (https:/ / serverlessconf.io) in 2016, there was talk that serverless technologies foreshadowed the era of NoOps. Some people believed that thanks to serverless, companies would no longer need to think about infrastructure operations.
 
-#### Nobis eleifend option conguenes.
+The cloud vendor will take care of everything was the thought. That assumption, that NoOps was a real thing, proved not to be the case.
 
-Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed posuere massa nunc quis dui. Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa nisi. Curabitur sit amet suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc imperdiet risus leo, in rutrum erat dignissim id.
-
-Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae nisi tortor. Morbi leo nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit bibendum. Morbi nec efficitur ex.
-
-#### Mauris tempor, orci id pellentesque.
-
-Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla dapibus dignissim. Pellentesque quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem rhoncus dolor, a facilisis neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa tristique. Nullam in aliquam diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed efficitur sollicitudin auctor. Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum et.
+When it comes to building and running serverless applications, DevOps engineers are essential, except now they have a different focus. Their attention is on deployment automation, testing, and working with the operations/support teams of their preferred cloud provider (rather than tweaking servers and patching operating systems).
+Companies can get away with smaller, more specialized DevOps teams; however, ignoring operations entirely is a recipe for disaster (and don't let anyone else tell you otherwise). Remember, when your application fails, customers hold you accountable, not your cloud provider, so be ready and have the right people and processes in place.
