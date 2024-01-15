@@ -5,8 +5,8 @@ import { normalizedData } from "@utils";
 import Layout from "@layout";
 import Header from "@layout/header/layout-01";
 import Footer from "@layout/footer/layout-01";
-import HeroArea from "@containers/hero/layout-01";
-import ServicesArea from "@containers/service/layout-01";
+import HeroArea from "@containers/hero/layout-13";
+import ServicesArea from "@containers/service/layout-03";
 import PortfolioArea from "@containers/portfolio/layout-01";
 import ResumeArea from "@containers/resume/layout-01";
 import TestimonialArea from "@containers/testimonial/layout-01";
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
 
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home Personal Portfolio">
             <Header
                 data={{
                     ...data.header,
@@ -35,7 +35,6 @@ const IndexPage = ({ data }) => {
                 <HeroArea
                     data={{
                         ...content["hero-section"],
-                        socials: data.site.siteMetadata.socials,
                     }}
                 />
                 <ServicesArea data={content["service-section"]} />
@@ -71,11 +70,11 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-    query DefaultPageQuery {
+    query PersonalPortfolioPageQuery {
         site {
             ...Site
         }
-        header: general(section: { eq: "header-1" }) {
+        header: general(section: { eq: "header-4" }) {
             ...Header01
         }
         navigation: general(section: { eq: "menu-1" }) {
@@ -86,7 +85,7 @@ export const query = graphql`
         footer: general(section: { eq: "footer-1" }) {
             ...Footer01
         }
-        homePage(title: { eq: "default-home" }) {
+        homePage(title: { eq: "personal-portfolio-home" }) {
             content {
                 ...Content01
             }

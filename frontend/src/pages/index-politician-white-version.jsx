@@ -5,7 +5,7 @@ import { normalizedData } from "@utils";
 import Layout from "@layout";
 import Header from "@layout/header/layout-01";
 import Footer from "@layout/footer/layout-01";
-import HeroArea from "@containers/hero/layout-01";
+import HeroArea from "@containers/hero/layout-04";
 import ServicesArea from "@containers/service/layout-01";
 import PortfolioArea from "@containers/portfolio/layout-01";
 import ResumeArea from "@containers/resume/layout-01";
@@ -19,11 +19,11 @@ import SkillArea from "@containers/skill/layout-01";
 import ExperienceArea from "@containers/experience/layout-01";
 import InterviewArea from "@containers/interview/layout-01";
 
-const IndexPage = ({ data }) => {
+const IndexPolititcianPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
 
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home Politician" className="white-version">
             <Header
                 data={{
                     ...data.header,
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-    query DefaultPageQuery {
+    query PoliticianWhitePageQuery {
         site {
             ...Site
         }
@@ -86,7 +86,7 @@ export const query = graphql`
         footer: general(section: { eq: "footer-1" }) {
             ...Footer01
         }
-        homePage(title: { eq: "default-home" }) {
+        homePage(title: { eq: "politician-home" }) {
             content {
                 ...Content01
             }
@@ -99,7 +99,7 @@ export const query = graphql`
     }
 `;
 
-IndexPage.propTypes = {
+IndexPolititcianPage.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
             siteMetadata: PropTypes.shape({
@@ -123,4 +123,4 @@ IndexPage.propTypes = {
     }),
 };
 
-export default IndexPage;
+export default IndexPolititcianPage;

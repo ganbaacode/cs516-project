@@ -1,9 +1,9 @@
 ---
-title: Mobile app landing design & app service
+title: Mobile app landing design & app maintain
 date: 2021-05-03 11:10:00
 category: Application
 image: {
-	src: "../images/blog/blog-02.jpg"
+	src: "../images/blog/blog-03.jpg"
 }
 ---
 

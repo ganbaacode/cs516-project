@@ -4,26 +4,22 @@ import { graphql } from "gatsby";
 import { normalizedData } from "@utils";
 import Layout from "@layout";
 import Header from "@layout/header/layout-01";
-import Footer from "@layout/footer/layout-01";
-import HeroArea from "@containers/hero/layout-01";
+import Footer from "@layout/footer/layout-02";
+import HeroArea from "@containers/hero/layout-11";
+import AboutArea from "@containers/about/layout-02";
+import SkillArea from "@containers/skill/layout-03";
 import ServicesArea from "@containers/service/layout-01";
-import PortfolioArea from "@containers/portfolio/layout-01";
-import ResumeArea from "@containers/resume/layout-01";
-import TestimonialArea from "@containers/testimonial/layout-01";
-import ClientArea from "@containers/client/layout-01";
-import PricingArea from "@containers/pricing/layout-01";
+import PortfolioArea from "@containers/portfolio/layout-06";
+import ClientArea from "@containers/client/layout-03";
+import TestimonialArea from "@containers/testimonial/layout-03";
+import PricingArea from "@containers/pricing/layout-02";
 import BlogArea from "@containers/blog/layout-01";
 import ContactArea from "@containers/contact/layout-01";
-import EducationArea from "@containers/education/layout-01";
-import SkillArea from "@containers/skill/layout-01";
-import ExperienceArea from "@containers/experience/layout-01";
-import InterviewArea from "@containers/interview/layout-01";
 
-const IndexPage = ({ data }) => {
+const IndexPhotographerPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
-
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home Photographer">
             <Header
                 data={{
                     ...data.header,
@@ -38,16 +34,12 @@ const IndexPage = ({ data }) => {
                         socials: data.site.siteMetadata.socials,
                     }}
                 />
+                <AboutArea data={content["about-section"]} />
+                <SkillArea data={content["skill-section"]} />
                 <ServicesArea data={content["service-section"]} />
                 <PortfolioArea data={content["portfolio-section"]} />
-                <ResumeArea data={content["resume-section"]}>
-                    <EducationArea data={content["education-section"]} />
-                    <SkillArea data={content["skill-section"]} />
-                    <ExperienceArea data={content["experience-section"]} />
-                    <InterviewArea data={content["interview-section"]} />
-                </ResumeArea>
-                <TestimonialArea data={content["testimonial-section"]} />
                 <ClientArea data={content["client-section"]} />
+                <TestimonialArea data={content["testimonial-section"]} />
                 <PricingArea data={content["pricing-section"]} />
                 <BlogArea
                     data={{
@@ -65,28 +57,34 @@ const IndexPage = ({ data }) => {
                     }}
                 />
             </main>
-            <Footer data={{ ...data.footer }} className="section-separator" />
+            <Footer
+                data={{
+                    ...data.footer,
+                    socials: data.site.siteMetadata.socials,
+                }}
+                className="section-separator"
+            />
         </Layout>
     );
 };
 
 export const query = graphql`
-    query DefaultPageQuery {
+    query PhotographerPageQuery {
         site {
             ...Site
         }
-        header: general(section: { eq: "header-1" }) {
+        header: general(section: { eq: "header-3" }) {
             ...Header01
         }
-        navigation: general(section: { eq: "menu-1" }) {
+        navigation: general(section: { eq: "menu-7" }) {
             menu {
                 ...Menu01
             }
         }
-        footer: general(section: { eq: "footer-1" }) {
-            ...Footer01
+        footer: general(section: { eq: "footer-2" }) {
+            ...Footer02
         }
-        homePage(title: { eq: "default-home" }) {
+        homePage(title: { eq: "photographer-home" }) {
             content {
                 ...Content01
             }
@@ -99,7 +97,7 @@ export const query = graphql`
     }
 `;
 
-IndexPage.propTypes = {
+IndexPhotographerPage.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
             siteMetadata: PropTypes.shape({
@@ -123,4 +121,4 @@ IndexPage.propTypes = {
     }),
 };
 
-export default IndexPage;
+export default IndexPhotographerPage;

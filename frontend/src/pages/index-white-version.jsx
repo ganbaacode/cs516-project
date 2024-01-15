@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
 
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home Default" className="white-version">
             <Header
                 data={{
                     ...data.header,
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-    query DefaultPageQuery {
+    query DefaultWhitePageQuery {
         site {
             ...Site
         }

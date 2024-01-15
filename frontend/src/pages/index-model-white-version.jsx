@@ -5,26 +5,21 @@ import { normalizedData } from "@utils";
 import Layout from "@layout";
 import Header from "@layout/header/layout-01";
 import Footer from "@layout/footer/layout-01";
-import HeroArea from "@containers/hero/layout-01";
-import ServicesArea from "@containers/service/layout-01";
-import PortfolioArea from "@containers/portfolio/layout-01";
-import ResumeArea from "@containers/resume/layout-01";
-import TestimonialArea from "@containers/testimonial/layout-01";
-import ClientArea from "@containers/client/layout-01";
-import PricingArea from "@containers/pricing/layout-01";
-import BlogArea from "@containers/blog/layout-01";
+import HeroArea from "@containers/hero/layout-02";
+import ServiceArea from "@containers/service/layout-03";
+import AboutArea from "@containers/about/layout-02";
+import ParallaxArea from "@containers/parallax";
+import PortfolioArea from "@containers/portfolio/layout-03";
+import ClientArea from "@containers/client/layout-03";
 import ContactArea from "@containers/contact/layout-01";
-import EducationArea from "@containers/education/layout-01";
-import SkillArea from "@containers/skill/layout-01";
-import ExperienceArea from "@containers/experience/layout-01";
-import InterviewArea from "@containers/interview/layout-01";
 
-const IndexPage = ({ data }) => {
+const IndexModelPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
 
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home Model" className="white-version">
             <Header
+                className="rn-d-none"
                 data={{
                     ...data.header,
                     ...data.navigation,
@@ -32,29 +27,12 @@ const IndexPage = ({ data }) => {
                 }}
             />
             <main className="main-page-wrapper">
-                <HeroArea
-                    data={{
-                        ...content["hero-section"],
-                        socials: data.site.siteMetadata.socials,
-                    }}
-                />
-                <ServicesArea data={content["service-section"]} />
+                <HeroArea data={content["hero-section"]} />
+                <ServiceArea data={content["service-section"]} />
+                <AboutArea data={content["about-section"]} hasSeparator />
+                <ParallaxArea data={content["parallax-section"]} />
                 <PortfolioArea data={content["portfolio-section"]} />
-                <ResumeArea data={content["resume-section"]}>
-                    <EducationArea data={content["education-section"]} />
-                    <SkillArea data={content["skill-section"]} />
-                    <ExperienceArea data={content["experience-section"]} />
-                    <InterviewArea data={content["interview-section"]} />
-                </ResumeArea>
-                <TestimonialArea data={content["testimonial-section"]} />
                 <ClientArea data={content["client-section"]} />
-                <PricingArea data={content["pricing-section"]} />
-                <BlogArea
-                    data={{
-                        ...content["blog-section"],
-                        blogs: data?.allArticle?.nodes,
-                    }}
-                />
                 <ContactArea
                     data={{
                         ...content["contact-section"],
@@ -71,14 +49,14 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-    query DefaultPageQuery {
+    query ModelWhitePageQuery {
         site {
             ...Site
         }
-        header: general(section: { eq: "header-1" }) {
+        header: general(section: { eq: "header-5" }) {
             ...Header01
         }
-        navigation: general(section: { eq: "menu-1" }) {
+        navigation: general(section: { eq: "menu-6" }) {
             menu {
                 ...Menu01
             }
@@ -86,20 +64,15 @@ export const query = graphql`
         footer: general(section: { eq: "footer-1" }) {
             ...Footer01
         }
-        homePage(title: { eq: "default-home" }) {
+        homePage(title: { eq: "model-home" }) {
             content {
                 ...Content01
-            }
-        }
-        allArticle(limit: 3) {
-            nodes {
-                ...Article
             }
         }
     }
 `;
 
-IndexPage.propTypes = {
+IndexModelPage.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
             siteMetadata: PropTypes.shape({
@@ -114,13 +87,10 @@ IndexPage.propTypes = {
         homePage: PropTypes.shape({
             content: PropTypes.arrayOf(PropTypes.shape({})),
         }),
-        allArticle: PropTypes.shape({
-            nodes: PropTypes.arrayOf(PropTypes.shape({})),
-        }),
         navigation: PropTypes.shape({}),
         header: PropTypes.shape({}),
         footer: PropTypes.shape({}),
     }),
 };
 
-export default IndexPage;
+export default IndexModelPage;

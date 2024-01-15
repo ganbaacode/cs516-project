@@ -4,26 +4,22 @@ import { graphql } from "gatsby";
 import { normalizedData } from "@utils";
 import Layout from "@layout";
 import Header from "@layout/header/layout-01";
-import Footer from "@layout/footer/layout-01";
-import HeroArea from "@containers/hero/layout-01";
-import ServicesArea from "@containers/service/layout-01";
-import PortfolioArea from "@containers/portfolio/layout-01";
+import Footer from "@layout/footer/layout-02";
+import HeroArea from "@containers/hero/layout-05";
+import ExperienceArea from "@containers/experience/layout-02";
+import EducationArea from "@containers/education/layout-02";
 import ResumeArea from "@containers/resume/layout-01";
-import TestimonialArea from "@containers/testimonial/layout-01";
-import ClientArea from "@containers/client/layout-01";
-import PricingArea from "@containers/pricing/layout-01";
+import PortfolioArea from "@containers/portfolio/layout-04";
 import BlogArea from "@containers/blog/layout-01";
-import ContactArea from "@containers/contact/layout-01";
-import EducationArea from "@containers/education/layout-01";
+import EducationTabArea from "@containers/education/layout-01";
 import SkillArea from "@containers/skill/layout-01";
-import ExperienceArea from "@containers/experience/layout-01";
+import ExperienceTabArea from "@containers/experience/layout-01";
 import InterviewArea from "@containers/interview/layout-01";
 
-const IndexPage = ({ data }) => {
+const IndexDeveloperPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
-
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home Developer">
             <Header
                 data={{
                     ...data.header,
@@ -32,61 +28,54 @@ const IndexPage = ({ data }) => {
                 }}
             />
             <main className="main-page-wrapper">
-                <HeroArea
-                    data={{
-                        ...content["hero-section"],
-                        socials: data.site.siteMetadata.socials,
-                    }}
-                />
-                <ServicesArea data={content["service-section"]} />
-                <PortfolioArea data={content["portfolio-section"]} />
+                <HeroArea data={content["hero-section"]} />
+                <ExperienceArea data={content["experience-section"]} />
+                <EducationArea data={content["education-section"]} />
                 <ResumeArea data={content["resume-section"]}>
-                    <EducationArea data={content["education-section"]} />
-                    <SkillArea data={content["skill-section"]} />
-                    <ExperienceArea data={content["experience-section"]} />
-                    <InterviewArea data={content["interview-section"]} />
+                    <EducationTabArea
+                        data={content["education-resume-section"]}
+                    />
+                    <SkillArea data={content["skill-resume-section"]} />
+                    <ExperienceTabArea
+                        data={content["experience-resume-section"]}
+                    />
+                    <InterviewArea data={content["interview-resume-section"]} />
                 </ResumeArea>
-                <TestimonialArea data={content["testimonial-section"]} />
-                <ClientArea data={content["client-section"]} />
-                <PricingArea data={content["pricing-section"]} />
+                <PortfolioArea data={content["portfolio-section"]} />
                 <BlogArea
                     data={{
                         ...content["blog-section"],
                         blogs: data?.allArticle?.nodes,
                     }}
                 />
-                <ContactArea
-                    data={{
-                        ...content["contact-section"],
-                        socials: data.site.siteMetadata.socials,
-                        phone: data.site.siteMetadata?.contact?.phone,
-                        email: data.site.siteMetadata?.contact?.email,
-                        getform_url: data.site.siteMetadata?.getform_url,
-                    }}
-                />
             </main>
-            <Footer data={{ ...data.footer }} className="section-separator" />
+            <Footer
+                data={{
+                    ...data.footer,
+                    socials: data.site.siteMetadata.socials,
+                }}
+            />
         </Layout>
     );
 };
 
 export const query = graphql`
-    query DefaultPageQuery {
+    query DeveloperPageQuery {
         site {
             ...Site
         }
         header: general(section: { eq: "header-1" }) {
             ...Header01
         }
-        navigation: general(section: { eq: "menu-1" }) {
+        navigation: general(section: { eq: "menu-3" }) {
             menu {
                 ...Menu01
             }
         }
-        footer: general(section: { eq: "footer-1" }) {
-            ...Footer01
+        footer: general(section: { eq: "footer-2" }) {
+            ...Footer02
         }
-        homePage(title: { eq: "default-home" }) {
+        homePage(title: { eq: "developer-home" }) {
             content {
                 ...Content01
             }
@@ -99,7 +88,7 @@ export const query = graphql`
     }
 `;
 
-IndexPage.propTypes = {
+IndexDeveloperPage.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
             siteMetadata: PropTypes.shape({
@@ -123,4 +112,4 @@ IndexPage.propTypes = {
     }),
 };
 
-export default IndexPage;
+export default IndexDeveloperPage;
