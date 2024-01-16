@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
+    "client-s3-deploy": "aws s3 sync public/ s3://cs516-final-project --profile ganbayar",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "build:prefix": "gatsby build --prefix-paths",
