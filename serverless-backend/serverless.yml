@@ -1,0 +1,45 @@
+
+service: serverless-backend
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  profile: ganbayar
+  environment:
+    bucketName: ${self:custom.bucketName}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+        - s3:*
+      Resource: '*'
+
+plugins:
+    - serverless-s3-sync
+
+custom:
+    bucketName: cs516-final-project-file
+    s3Sync:
+        - bucketName: ${self:custom.bucketName}
+          localDir: uploadData
+
+
+functions:
+  getFile:
+    handler: lambdas/getFile.handler
+    events:
+      - http:
+          path: get-file/{filename}
+          method: GET
+          cors: true
+
+
+resources:
+ Resources:
+   DocBucketUpload:
+     Type: AWS::S3::Bucket
+     Properties:
+       BucketName: ${self:custom.bucketName}
+
