@@ -23,13 +23,8 @@
             "buttons": [
                 {
                     "id": 1,
-                    "path": "#contacts",
+                    "path": "https://gzs08rcxzi.execute-api.us-east-1.amazonaws.com/dev/get-file/cv.docx",
                     "content": "Download My CV"
-                },
-                {
-                    "id": 2,
-                    "path": "#contacts",
-                    "content": "Hire Me"
                 }
             ]
         },
