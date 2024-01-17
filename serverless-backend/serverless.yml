@@ -14,6 +14,7 @@ provider:
       Action:
         - dynamodb:*
         - s3:*
+        - ses:*
       Resource: '*'
 
 plugins:
@@ -34,12 +35,18 @@ functions:
           path: get-file/{filename}
           method: GET
           cors: true
+  sendEmail:
+    handler: lambdas/sendEmail.handler
+    events:
+      - http:
+          path: send-email
+          method: POST
+          cors: true
 
 
 resources:
- Resources:
-   DocBucketUpload:
-     Type: AWS::S3::Bucket
-     Properties:
-       BucketName: ${self:custom.bucketName}
-
+  Resources:
+    DocBucketUpload:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.bucketName}
