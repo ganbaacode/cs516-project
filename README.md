@@ -13,7 +13,7 @@ Created my own Personal Portfolio webpage using AWS services.
 
 ## Tech Stack
 
-List the technologies and frameworks used in your project.
+List the technologies and frameworks used in this project.
 
 - Frontend: React
 - Backend: Node.js
