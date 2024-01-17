@@ -12,6 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "client-s3-deploy": "aws s3 sync public/ s3://cs516-final-project --profile ganbayar",
+    "client-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id ECPWTCLYSHBGM --paths '/*' --profile ganbayar",
+    "client-deploy": "npm run build && npm run client-s3-deploy && npm run client-cloudfront-invalidation",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "build:prefix": "gatsby build --prefix-paths",

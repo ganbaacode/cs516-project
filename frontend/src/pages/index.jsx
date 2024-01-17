@@ -9,7 +9,6 @@ import SkillArea from "@containers/skill/layout-02";
 import ServicesArea from "@containers/service/layout-05";
 import PortfolioArea from "@containers/portfolio/layout-05";
 import BlogArea from "@containers/blog/layout-03";
-import TestimonialArea from "@containers/testimonial/layout-02";
 import ContactArea from "@containers/contact/layout-03";
 
 const IndexFreelencerPage = ({ data }) => {

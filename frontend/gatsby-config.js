@@ -9,7 +9,7 @@ module.exports = {
         titleTemplate: "inbio",
         twitterUsername: "@rainbowit",
         getform_url:
-            "https://getform.io/f/7a6695a7-c8e3-442c-bc2f-d46d3b9a535e",
+            "https://gzs08rcxzi.execute-api.us-east-1.amazonaws.com/dev/send-email",
         socials: [
             {
                 id: 1,
