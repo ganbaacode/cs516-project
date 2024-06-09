@@ -39,12 +39,12 @@ const IndexFreelencerPage = ({ data }) => {
                                     <PortfolioArea
                                         data={content["portfolio-section"]}
                                     />
-                                    <BlogArea
+                                    {/* <BlogArea
                                         data={{
                                             ...content["blog-section"],
                                             blogs: data?.allArticle?.nodes,
                                         }}
-                                    />
+                                    /> */}
                                     <ContactArea
                                         data={{
                                             getform_url:

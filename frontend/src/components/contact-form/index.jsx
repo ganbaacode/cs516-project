@@ -52,7 +52,7 @@ const ContactForm = ({ className, url }) => {
 
     return (
         <div className={cn("contact-form-wrapper", className)}>
-            <div className="col-lg-12">
+            {/* <div className="col-lg-12">
                 <Label htmlFor="name">Phone: +976 88073667</Label>
                 <Label htmlFor="name">Email: info@soronzonbold.com</Label>
                 <Label htmlFor="name">Web: www.soronzonbold.com</Label>
@@ -61,7 +61,7 @@ const ContactForm = ({ className, url }) => {
             <div>
                 <br></br>
                 <Label htmlFor="name">Бидэнтэй мэйлээр холбогдох:</Label>
-            </div>
+            </div> */}
             <div className="introduce">
                 <form
                     className="rnt-contact-form rwt-dynamic-form row"
@@ -70,7 +70,7 @@ const ContactForm = ({ className, url }) => {
                 >
                     <div className="col-lg-6">
                         <FormGroup>
-                            <Label htmlFor="name">Your Name</Label>
+                            <Label htmlFor="name">Нэр</Label>
                             <Input
                                 name="name"
                                 id="name"
@@ -87,7 +87,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-6">
                         <FormGroup>
-                            <Label htmlFor="phone">Phone Number</Label>
+                            <Label htmlFor="phone">Утасны дугаар</Label>
                             <Input
                                 name="phone"
                                 id="phone"
@@ -104,7 +104,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-12">
                         <FormGroup>
-                            <Label htmlFor="email">Email</Label>
+                            <Label htmlFor="email">Мэйл хаяг</Label>
                             <Input
                                 id="email"
                                 name="email"
@@ -125,7 +125,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-12">
                         <FormGroup>
-                            <Label htmlFor="subject">subject</Label>
+                            <Label htmlFor="subject">Гарчиг</Label>
                             <Input
                                 id="subject"
                                 name="subject"
@@ -142,7 +142,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-12">
                         <FormGroup>
-                            <Label htmlFor="message">Your Message</Label>
+                            <Label htmlFor="message">Захидал</Label>
                             <Textarea
                                 name="message"
                                 id="message"
@@ -158,7 +158,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-12">
                         <Button type="submit">
-                            <span>SEND MESSAGE</span>
+                            <span>ИЛГЭЭХ</span>
                             <ArrowRight />
                         </Button>
                         {serverState.status && (
