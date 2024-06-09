@@ -1,11 +1,11 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: "https://www.yourdomain.tld",
-        title: "Personal Portfolio",
+        siteUrl: "https://www.soronsonbold.com",
+        title: "Personal",
         description: "Personal Protfolio",
-        author: "Ganbayar",
-        siteLanguage: "en",
-        image: "banner.jpg",
+        author: "Soronzonbold",
+        siteLanguage: "mn",
+        image: "",
         titleTemplate: "inbio",
         twitterUsername: "@rainbowit",
         getform_url:
