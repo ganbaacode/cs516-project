@@ -21,7 +21,7 @@ exports.handler = async (event) => {
             statusCode: 200,
             headers: {
                 'Content-Type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                'Content-Disposition': 'attachment; filename=cv.docx',
+                'Content-Disposition': 'attachment; filename=myworks.pdf',
             },
             isBase64Encoded: true,
             body: data.Body.toString('base64'),
