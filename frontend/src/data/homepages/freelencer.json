@@ -6,38 +6,35 @@
             "section": "hero-section",
             "headings": [
                 {
-                    "content": "<span>Ganbayar Tsogbadrakh</span><br><span class='span'> Software Developer.</span>"
+                    "content": "<span>Лхагвасүрэнгийн Соронзонболд</span><br><span class='span'> Ажлын алба.</span>"
                 }
             ],
             "texts": [
                 {
-                    "content": "I'm a passionate backend developer with a knack for turning ideas into reality through clean and efficient code."
+                    "content": "М Банкны гүйцэтгэх захирал Л.Соронзонболдын албан ёсны цахим хуудас"
                 }
             ],
             "images": [
                 {
-                    "src": "../images/ganbaa.png",
-                    "alt": "Personal Portfolio Images"
+                    "src": "../images/soronzonbold1.png",
+                    "alt": "Personal Images"
                 }
             ],
             "buttons": [
                 {
                     "id": 1,
                     "path": "https://gzs08rcxzi.execute-api.us-east-1.amazonaws.com/dev/get-file/cv.docx",
-                    "content": "Download My CV"
+                    "content": "Товч намтар"
                 }
             ]
         },
         {
             "id": "freelencer-home-about",
             "section": "about-section",
-            "title": "About Me",
+            "title": "Миний тухай",
             "texts": [
                 {
-                    "content": "Dedicated and seasoned Backend Developer with a robust track record of 6 years in the dynamic realms of banking and retail. My journey in the tech industry has been marked by a passion for crafting innovative and scalable solutions that power the backbone of digital ecosystems.."
-                },
-                {
-                    "content": "Throughout my career, I have honed my skills in backend development, specializing in frameworks including Spring Boot, and Express, enabling me to architect and implement robust server-side solutions."
+                    "content": "Миний бие Лхагвасүрэн овогтой Соронзонболд 2024 оны Улсын Их Хурлын сонгуульд Зүүн бүсэд нэр дэвшиж байгаа билээ. Нутаг орныхоо хөгжлийн төлөө хүүгийн сэтгэлээр мэдлэг, туршлагаа харамгүй зориулах үйлсэд маань дэмжлэг үзүүлэхийг хүсье."
                 }
             ]
         },
@@ -245,7 +242,7 @@
         {
             "id": "freelencer-home-portfolio",
             "section": "portfolio-section",
-            "title": "Experience",
+            "title": "Холбоо барих",
             "items": [
                 {
                     "id": 1,

@@ -52,6 +52,16 @@ const ContactForm = ({ className, url }) => {
 
     return (
         <div className={cn("contact-form-wrapper", className)}>
+            <div className="col-lg-12">
+                <Label htmlFor="name">Phone: 88073667</Label>
+                <Label htmlFor="name">Email: mail@soronzonboldlkh.mn</Label>
+                <Label htmlFor="name">Web: soronzonboldlkh.mn</Label>
+                <Label htmlFor="name">Address: 74 door , Grand office, Jamyangun street, 1st khoroo, Sukhbaatar district, Ulaanbaatar, Mongolia</Label>
+            </div>
+            <div>
+                <br></br>
+                <Label htmlFor="name">Бидэнтэй мэйлээр холбогдох:</Label>
+            </div>
             <div className="introduce">
                 <form
                     className="rnt-contact-form rwt-dynamic-form row"
@@ -153,11 +163,10 @@ const ContactForm = ({ className, url }) => {
                         </Button>
                         {serverState.status && (
                             <p
-                                className={`mt-4 font-14 ${
-                                    !serverState.status.ok
-                                        ? "text-red"
-                                        : "text-success"
-                                }`}
+                                className={`mt-4 font-14 ${!serverState.status.ok
+                                    ? "text-red"
+                                    : "text-success"
+                                    }`}
                             >
                                 {serverState.status.msg}
                             </p>
