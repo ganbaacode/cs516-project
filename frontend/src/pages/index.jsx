@@ -33,6 +33,9 @@ const IndexFreelencerPage = ({ data }) => {
                                     <ServicesArea
                                         data={content["service-section"]}
                                     />
+                                    <ServicesArea
+                                        data={content["experience-section"]}
+                                    />
                                     <PortfolioArea
                                         data={content["portfolio-section"]}
                                     />

@@ -21,7 +21,7 @@ export const CardListItem = ({ children, path, ...rest }) => {
             )}
             {!path && (
                 <button type="button" {...rest}>
-                    {children} <ArrowRight />
+                    {children}
                 </button>
             )}
         </li>

@@ -24,7 +24,7 @@
                 {
                     "id": 1,
                     "path": "https://44wbwk1hdd.execute-api.us-east-1.amazonaws.com/dev/get-file/myworks.pdf",
-                    "content": "Товч намтар"
+                    "content": "Банкны салбарт хэрэгжүүлсэн онцлох 5 ажил"
                 }
             ]
         },
@@ -235,25 +235,59 @@
             ]
         },
         {
-            "id": "freelencer-home-portfolio",
-            "section": "portfolio-section",
+            "id": "freelencer-home-services",
+            "section": "experience-section",
             "title": "Ажлын туршлага",
             "items": [
                 {
                     "id": 1,
                     "title": "ТУЗ-ын дарга - Ерөнхийлөгчийн тамгын газар (2020 - 2021)",
+                    "path": ""
+                },
+                {
+                    "id": 2,
+                    "title": "Зөвлөх - Ерөнхийлөгчийн тамгын газар (2018 - 2020)",
+                    "path": ""
+                },
+                {
+                    "id": 3,
+                    "title": "Гүйцэтгэх захирлын орлогч - Ерөнхийлөгчийн тамгын газар (2011 – 2018)",
+                    "path": ""
+                },
+                {
+                    "id": 4,
+                    "title": "Гүйцэтгэх тэргүүн дэд захирал - Ерөнхийлөгчийн тамгын газар (2001 – 2011)",
+                    "path": ""
+                },
+                {
+                    "id": 5,
+                    "title": "Салбарын зохицуулагч - Ерөнхийлөгчийн тамгын газар (1999 – 2001)",
+                    "path": ""
+                },
+                {
+                    "id": 6,
+                    "title": "Маркетингийн мэргэжилтэн - Ерөнхийлөгчийн тамгын газар (1997 – 1999)",
+                    "path": ""
+                }
+            ]
+        },
+        {
+            "id": "freelencer-home-portfolio",
+            "section": "portfolio-section",
+            "title": "Банкны салбарт хэрэгжүүлсэн онцлох 5 ажил",
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Зээлийн шинэ түүхийг эхлүүлэв",
                     "category": "Experience",
                     "texts": [
                         {
-                            "content": "Designing and developing RESTful APIs to facilitate communication between different components of the application."
-                        },
-                        {
-                            "content": "Integrating third-party services, APIs, and components into the backend system to enhance functionality."
+                            "content": "Монгол орон зах зээлийн нийгэмд шилжээд удаагүй байх үед банкны хадгаламжийн хүү жилийн 100 хувь, зээлийн хүү 200 хувь болоод иргэдэд зээл олдохгүй болчихсон энэ үед нөхдийн хамт Хөгжлийн алтан санг үүсгэн байгуулж, сарын 8 хувийн хүүтэй зээл өгөх болсноор банкнууд зээл олгож эхэлсэн түүхтэй."
                         }
                     ],
                     "images": [
                         {
-                            "src": "../images/portfolio/7eleven.jpeg"
+                            "src": "../images/portfolio/c1.png"
                         }
                     ],
                     "path": "#!",
@@ -261,19 +295,16 @@
                 },
                 {
                     "id": 2,
-                    "title": "M Bank - Full stack developer ( 2018 - 2022 )",
+                    "title": "Анхны банк бус санхүүгийн байгууллагыг байгуулсан",
                     "category": "Experience",
                     "texts": [
                         {
-                            "content": "Created and enhanced custom reusable front-end components and backend services for Digital banking project."
-                        },
-                        {
-                            "content": "Utilized Node.js and React to build and maintain highly scalable web applications"
+                            "content": "Нөхдийн хамт амжилттай хэрэгжүүлсэн санхүүгийн үйлчилгээнүүддээ түшиглэн Монголын анхны банк бус санхүүгийн байгууллагыг үүсгэн байгуулав. Үүний тулд хууль эрх зүйн орчныг бүрдүүлэхэд гар бие оролцсон."
                         }
                     ],
                     "images": [
                         {
-                            "src": "../images/portfolio/mbank.png"
+                            "src": "../images/portfolio/c2.png"
                         }
                     ],
                     "path": "#!",
@@ -281,19 +312,16 @@
                 },
                 {
                     "id": 3,
-                    "title": "City Oil LLC - Backend developer ( 2017 - 2018 )",
+                    "title": "Багийн хамт хас банкийг байгуулан, олон шинэлэг үйлчилгээг нэвтрүүлсэн",
                     "category": "Experience",
                     "texts": [
                         {
-                            "content": "Utilized Node.js, Spring Boot, and React to build scalable web applications"
-                        },
-                        {
-                            "content": "Collaborated with a team of developers to deliver high-quality software on time within budget"
+                            "content": "2003 онд буюу 2 жилийн хугацаанд бүх аймагт салбартай болж чадсан. Эдгээр салбаруудыг биечлэн байгуулж, банкны салбарын захирлуудыг эрчимжүүлсэн хөтөлбөрөөр маш богино хугацаанд бэлтгэж байв. Мөн теллерийн систем, явуулын банкны үйлчилгээ, Ирээдүйн саятан хүүхдийн хадгаламж, цахилгаан барааны лизинг үйлчилгээ, харилцагчийн үзэсгэлэн яармаг зэрэг түүний санаачилгууд нийгэмд олон дэвшлийг дагуулсан."
                         }
                     ],
                     "images": [
                         {
-                            "src": "../images/portfolio/oil.jpeg"
+                            "src": "../images/portfolio/c3.png"
                         }
                     ],
                     "path": "#!",
@@ -301,19 +329,33 @@
                 },
                 {
                     "id": 4,
-                    "title": "It Zone - On Site engineer ( 2015 - 2017 )",
+                    "title": "Банкны ажилтнууддаа хувьцаа олгох санаачилгыг анхлан хэрэгжүүлэв",
                     "category": "Experience",
                     "texts": [
                         {
-                            "content": "Created whole network solution architecture."
-                        },
-                        {
-                            "content": "Configured and maintained Firewalls and WAN , LAN ( Cisco ) devices"
+                            "content": "Банк, санхүүгийн салбарт хийсэн онцлох ажлуудын нэг нь олон шилдэг боловсон хүчин, менежер, удирдлагыг бэлтгэсэн явдал юм. Тэрээр хамтран ажиллагсдынхаа нийгмийн асуудлыг шийдвэрлэх зорилгоор 600 гаруй ажилтнуудад хувьцаа олгох хөтөлбөрийг нөхдийн хамт санаачлан хэрэгжүүснээс гадна тэтгэврийн сан, ажиллагсдын хөрөнгө оруулалттай компани байгуулахад манлайлан оролцсон байна."
                         }
                     ],
                     "images": [
                         {
-                            "src": "../images/portfolio/itzone.jpeg"
+                            "src": "../images/portfolio/c4.png"
+                        }
+                    ],
+                    "path": "#!",
+                    "likeCount": 360
+                },
+                {
+                    "id": 5,
+                    "title": "Санхүүгийн харилцааг дахин загварчлах зорилготой монголын анхны нео банк болох М банкийг үүсгэн байгуулалцлаа",
+                    "category": "Experience",
+                    "texts": [
+                        {
+                            "content": "Өдгөө тус банк салбаргүй, дижиталаар үйлчилгээгээ хүргэх зорилт тавин амжилттай ажиллаж байна"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "src": "../images/portfolio/c5.png"
                         }
                     ],
                     "path": "#!",

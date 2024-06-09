@@ -17,7 +17,7 @@ const ServiceArea = ({ data }) => {
                 {data?.items && (
                     <CardList>
                         {data.items?.map((item) => (
-                            <CardListItem key={item.id} path={item.path}>
+                            <CardListItem key={item.id}>
                                 {item.title}
                             </CardListItem>
                         ))}
