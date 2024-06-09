@@ -53,7 +53,7 @@ const ContactForm = ({ className, url }) => {
     return (
         <div className={cn("contact-form-wrapper", className)}>
             <div className="col-lg-12">
-                <Label htmlFor="name">Phone: 88073667</Label>
+                <Label htmlFor="name">Phone: +976 88073667</Label>
                 <Label htmlFor="name">Email: info@soronzonbold.com</Label>
                 <Label htmlFor="name">Web: www.soronzonbold.com</Label>
                 <Label htmlFor="name">Address: 74 door , Grand office, Jamyangun street, 1st khoroo, Sukhbaatar district, Ulaanbaatar, Mongolia</Label>
