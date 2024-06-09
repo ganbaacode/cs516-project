@@ -12,7 +12,7 @@ exports.handler = async (event) => {
 
     const params = {
         Destination: {
-            ToAddresses: ['ganbayar.tsogbadrakh@miu.edu'],
+            ToAddresses: ['info@soronzonbold.com'],
         },
         Message: {
             Body: {
