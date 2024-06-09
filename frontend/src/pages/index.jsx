@@ -33,14 +33,14 @@ const IndexFreelencerPage = ({ data }) => {
                                     <ServicesArea
                                         data={content["service-section"]}
                                     />
+                                    <PortfolioArea
+                                        data={content["portfolio-section"]}
+                                    />
                                     <BlogArea
                                         data={{
                                             ...content["blog-section"],
                                             blogs: data?.allArticle?.nodes,
                                         }}
-                                    />
-                                    <PortfolioArea
-                                        data={content["portfolio-section"]}
                                     />
                                     <ContactArea
                                         data={{
